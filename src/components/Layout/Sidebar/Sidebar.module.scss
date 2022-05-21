@@ -1,0 +1,37 @@
+.sidebar {
+    width: 80px
+}
+
+@mixin icon-container {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    @include icon-container;
+}
+
+.link {
+    @include icon-container;
+
+    img {
+        opacity: 0.3;
+    }
+
+    &:hover {
+        img {
+            opacity: 1
+        }
+    }
+}
+
+.active-link {
+    background-color: $primary-blue;
+
+    img {
+        opacity: 1
+    }
+}
