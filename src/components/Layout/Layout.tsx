@@ -6,10 +6,12 @@ const Layout = (props) => {
   const { children } = props;
 
   return (
-    <div>
+    <div className="d-flex">
       <Sidebar />
-      <Navbar />
-      {children}
+      <div className="d-flex flex-column flex-grow-1">
+        <Navbar />
+        {children}
+      </div>
     </div>
   );
 };
