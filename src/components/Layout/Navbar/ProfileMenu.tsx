@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Navbar.module.scss';
 
-const Avatar = () => {
+const ProfileMenu = () => {
   return (
     <div className="btn-group">
       <button
@@ -35,4 +35,4 @@ const Avatar = () => {
   );
 };
 
-export default Avatar;
+export default ProfileMenu;
