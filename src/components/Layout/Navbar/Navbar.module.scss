@@ -1,0 +1,26 @@
+.navbar {
+    height: 80px;
+}
+
+.profile-btn {
+    border: none;
+    background: none;
+    color: $light-color;
+    font-weight: $semi-bold;
+
+    &:after {
+        color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+.avatar {
+    height: 36px;
+    width: 36px;
+    margin-right: 10px;
+    margin-left: 8px;
+}
+
+.profile-dropdown-item {
+    color: $light-color;
+    font-size: $caption;
+}

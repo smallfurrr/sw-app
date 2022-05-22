@@ -1,5 +1,6 @@
 import React from 'react';
 import Sidebar from './Sidebar';
+import Navbar from './Navbar';
 
 const Layout = (props) => {
   const { children } = props;
@@ -7,6 +8,7 @@ const Layout = (props) => {
   return (
     <div>
       <Sidebar />
+      <Navbar />
       {children}
     </div>
   );
