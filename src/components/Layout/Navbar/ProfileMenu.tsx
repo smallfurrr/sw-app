@@ -7,13 +7,18 @@ const ProfileMenu = () => {
       <button
         type="button"
         className={`btn-sm dropdown-toggle dropdown-toggle-split ${styles['profile-btn']}`}
+        data-bs-display="static"
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        <span>Hello, John</span>
-        <img src="/mock-avatar.svg" className={styles.avatar} />
+        <span className="d-none d-md-inline-block">Hello, John</span>
+        <img
+          src="/mock-avatar.svg"
+          alt="user-picture"
+          className={styles.avatar}
+        />
       </button>
-      <ul className="dropdown-menu">
+      <ul className={`dropdown-menu ${styles['profile-dropdown']}`}>
         <li>
           <a
             className={`dropdown-item ${styles['profile-dropdown-item']}`}

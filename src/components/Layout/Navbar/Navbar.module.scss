@@ -1,12 +1,30 @@
+@import 'bootstrap/scss/_functions';
+@import 'bootstrap/scss/_variables';
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 .navbar {
     height: 80px;
     background: white;
+    border-bottom: 1px solid $border;
+}
+
+.product-title {
+    color: $dark-grey;
+    font-weight: $semi-bold;
+}
+
+.breadcrumb-container {
+    border-left: 1px solid $border;
+}
+
+.breadcrumb {
+    font-weight: $regular;
 }
 
 .profile-btn {
     border: none;
     background: none;
-    color: $light-color;
+    color: $faded-black;
     font-weight: $semi-bold;
 
     &:after {
@@ -21,8 +39,15 @@
     margin-left: 8px;
 }
 
+@include media-breakpoint-down(sm) {
+    .profile-dropdown[data-bs-popper] {
+        right: 0;
+        left: auto;
+    }
+}
+
 .profile-dropdown-item {
-    color: $light-color;
+    color: $faded-black;
     font-size: $button;
 }
 
