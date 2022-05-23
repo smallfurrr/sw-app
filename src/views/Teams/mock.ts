@@ -47,7 +47,6 @@ export const TEAMS = [
     is_archived: false,
     created_at: '08 May 2017',
   },
-  ,
   {
     id: 5,
     name: 'Workday - AU',

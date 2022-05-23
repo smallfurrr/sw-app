@@ -37,6 +37,28 @@
     }
 }
 
+.filter-btns-container {
+    :not(:last-child) {
+        margin-right: 40px;
+    }
+}
+
+.filter-btn {
+    font-size: $small-heading;
+    font-weight: $semi-bold;
+    border-radius: 0;
+
+    &:active,
+    &:focus {
+        color: $highlight-blue;
+    }
+}
+
+.active-filter {
+    color: $highlight-blue;
+    border-bottom: 3px solid $highlight-blue;
+}
+
 @include media-breakpoint-down(sm) {
     .create-btn {
         margin-top: 20px;

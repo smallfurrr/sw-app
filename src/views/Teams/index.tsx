@@ -39,22 +39,22 @@ const Teams = () => {
 
   return (
     <Layout>
-      <TeamsHeader handleFilter={handleFilterTeams} />
+      <TeamsHeader handleFilter={handleFilterTeams} activeFilter={filter} />
       <div className="container-fluid px-5 py-5">
         <div className="row d-flex justify-content-between">
           <div className={`col-12 col-lg-9 p-0 ${styles['teams-container']}`}>
             <div
               className={`d-flex flex-column flex-md-row justify-content-md-between py-3 px-4 ${styles['teams-title-row']}`}
             >
-              {/* TODO title should be dynamic - like all, favourite etc */}
-              <h5 className="mb-0">All Teams</h5>
-              {/* TODO count should be dynamic */}
+              <h5 className="mb-0">
+                {filter === FAVORITES ? 'Favorite' : filter} Teams
+              </h5>
               <span>
-                Showing {displayedTeams.length - 1} out of{' '}
-                {displayedTeams.length - 1} teams
+                Showing {displayedTeams.length} out of {displayedTeams.length}{' '}
+                teams
               </span>
             </div>
-            <div className="container-fluid py-3">
+            <div className="container-fluid pt-3 pb-4">
               <div className="row mt-auto g-3">
                 {displayedTeams.map((team, index) => {
                   return (
