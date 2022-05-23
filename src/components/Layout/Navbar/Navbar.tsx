@@ -2,8 +2,13 @@ import React from 'react';
 import styles from './Navbar.module.scss';
 import ProfileMenu from './ProfileMenu';
 import Notifications from './Notifications';
+import { UserInterface } from '../../../types';
 
-const Navbar = () => {
+interface NavbarProps {
+  user: UserInterface;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ user }) => {
   return (
     <div className={`container-fluid px-5 ${styles.navbar}`}>
       <div className="row" style={{ height: '100%' }}>
@@ -18,8 +23,8 @@ const Navbar = () => {
           </div>
         </div>
         <div className="col-xs-4 col-md-3 d-flex justify-content-end align-items-center">
-          <Notifications />
-          <ProfileMenu />
+          <Notifications user={user} />
+          <ProfileMenu user={user} />
         </div>
       </div>
     </div>

@@ -1,0 +1,35 @@
+@import 'bootstrap/scss/_functions';
+@import 'bootstrap/scss/_variables';
+@import 'bootstrap/scss/mixins/_breakpoints';
+
+@mixin content-container {
+    background: white;
+}
+
+.teams-container {
+    @include content-container;
+}
+
+.teams-title-row {
+    border-bottom: 1px solid $border-light;
+
+    h5 {
+        font-weight: $semi-bold;
+        color: black;
+    }
+
+    span {
+        font-size: $button;
+        color: $mid-grey;
+    }
+}
+
+.activity-container {
+    @include content-container;
+}
+
+@include media-breakpoint-up(lg) {
+    .activity-container {
+        width: 22%;
+    }
+}

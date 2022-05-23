@@ -9,7 +9,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`d-flex flex-column justify-content-between flex-shrink-0 bg-dark vh-100 d-none d-md-block ${styles.sidebar}`}
+      className={`d-flex flex-column justify-content-between flex-shrink-0 bg-dark d-none d-md-flex ${styles.sidebar}`}
     >
       <div className="d-flex flex-column align-items-center">
         <a href="#">

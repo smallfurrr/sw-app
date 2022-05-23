@@ -1,7 +1,14 @@
 import React from 'react';
 import styles from './Navbar.module.scss';
+import { UserInterface } from '../../../types';
 
-const ProfileMenu = () => {
+interface ProfileMenuProps {
+  user: UserInterface;
+}
+
+const ProfileMenu: React.FC<ProfileMenuProps> = ({ user }) => {
+  const { name, avatar } = user;
+
   return (
     <div className="btn-group">
       <button
@@ -11,12 +18,8 @@ const ProfileMenu = () => {
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        <span className="d-none d-md-inline-block">Hello, John</span>
-        <img
-          src="/mock-avatar.svg"
-          alt="user-picture"
-          className={styles.avatar}
-        />
+        <span className="d-none d-md-inline-block">Hello, {name}</span>
+        <img src={avatar} alt="user-picture" className={styles.avatar} />
       </button>
       <ul className={`dropdown-menu ${styles['profile-dropdown']}`}>
         <li>

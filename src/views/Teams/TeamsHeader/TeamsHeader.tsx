@@ -26,7 +26,7 @@ const TeamsHeader = () => {
         >
           <Search
             placeholder="Search team name..."
-            // TODO
+            // TODO?
             handleSearch={() => console.log('whee')}
           />
         </div>

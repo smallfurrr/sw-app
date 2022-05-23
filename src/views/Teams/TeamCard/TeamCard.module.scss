@@ -1,0 +1,50 @@
+.card-top-half {
+    padding: 16px;
+    border-bottom: 1px solid $card-border;
+}
+
+.card-bottom-half {
+    padding: 20px 16px;
+}
+
+.team-card-container {
+    background: white;
+    border: 1px solid $card-border;
+    border-radius: 4px;
+}
+
+.team-avatar {
+    height: 36px;
+    width: 36px;
+    border-radius: 3px;
+    background-size: cover;
+    margin-right: 9px;
+    flex-shrink: 0;
+}
+
+.created-text {
+    font-size: $subtitle;
+    color: $body-grey;
+    opacity: 0.5;
+}
+
+.description-container {
+    max-height: 40px;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+.description-text {
+    font-size: $button;
+    color: $body-grey;
+}
+
+.count-text {
+    font-size: $subtitle;
+    color: $more-faded-black;
+    margin-left: 6px;
+}
+
+.archived {
+    background: $card-background;
+}
