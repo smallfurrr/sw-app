@@ -2,15 +2,14 @@
 @import './variables.scss';
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-
 html,
 body {
     font-family: $font-stack;
-    height: 100%;
+    min-height: 100vh;
 }
 
 #__next {
-    height: 100%;
+    min-height: 100vh;
 }
 
 a {

@@ -7,7 +7,7 @@ const Layout = (props) => {
   const { children } = props;
 
   return (
-    <div className="d-flex" style={{ height: '100%' }}>
+    <div className="d-flex" style={{ minHeight: '100vh' }}>
       <Sidebar />
       <div className="d-flex flex-column flex-grow-1">
         <Navbar user={CURRENT_USER} />

@@ -1,5 +1,6 @@
 .sidebar {
-    width: 80px
+    width: 80px;
+    min-height: 100vh;
 }
 
 @mixin icon-container {
