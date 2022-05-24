@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import styles from './Search.module.scss';
 
 interface SearchProps {
@@ -14,9 +15,14 @@ const Search: React.FC<SearchProps> = ({ placeholder, handleSearch }) => {
   };
 
   return (
-    <div>
-      <button onClick={() => handleSearch()} className="btn">
-        <img src="/icon-search.svg" alt="magnifying-icon" />
+    <div className="d-flex align-items-center">
+      <button onClick={() => handleSearch()} className="btn p-0">
+        <Image
+          src="/icon-search.svg"
+          height={16}
+          width={16}
+          alt="magnifying-icon"
+        />
       </button>
       <input
         value={searchInput}

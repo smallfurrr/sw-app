@@ -1,0 +1,25 @@
+.activity-container {
+    margin-bottom: 11px;
+}
+
+.activity-avatar {
+    @include avatar-common-properties;
+    border-radius: 50%;
+    margin-right: 9px;
+    flex-shrink: 0;
+}
+
+.activity-body {
+    color: $charcoal;
+    font-size: $button;
+}
+
+.activity-body-bold {
+    font-weight: $semi-bold;
+}
+
+.activity-created-text {
+    margin-top: 5px;
+    color: $body-grey-light;
+    font-size: $subtitle;
+}

@@ -1,0 +1,16 @@
+.unread-count-badge {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $primary-blue;
+    position: absolute;
+    top: -10px;
+    right: -7px;
+    box-shadow: 0 0 0 2px white;
+    z-index: 1;
+
+    span {
+        color: white;
+        font-size: $caption;
+    }
+}

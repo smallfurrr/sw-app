@@ -14,10 +14,8 @@
 }
 
 .team-avatar {
-    height: 36px;
-    width: 36px;
+    @include avatar-common-properties;
     border-radius: 3px;
-    background-size: cover;
     margin-right: 9px;
     flex-shrink: 0;
 }

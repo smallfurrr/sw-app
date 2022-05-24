@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from './Navbar.module.scss';
-import { UserInterface } from '../../../types';
+import styles from './Notifications.module.scss';
+import { UserInterface } from '../../../../types';
+import Image from 'next/image';
 interface NotificationsProps {
   user: UserInterface;
 }
@@ -16,7 +17,7 @@ const Notifications: React.FC<NotificationsProps> = ({ user }) => {
         >
           <span>{notifications_count}</span>
         </div>
-        <img src="/icon-mail.svg" alt="mail-icon" />
+        <Image height={24} width={24} src="/icon-mail.svg" alt="mail-icon" />
       </div>
     </a>
   );

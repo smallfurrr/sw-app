@@ -53,8 +53,10 @@ const TeamCard: React.FC<TeamCardProps> = ({ team }) => {
             </div>
           </div>
           <div className="d-flex align-items-start">
-            <img
+            <Image
               src={is_favorited ? '/star-active.svg' : '/star-default.svg'}
+              width={17}
+              height={16}
               alt="favorited-indicator"
             />
           </div>

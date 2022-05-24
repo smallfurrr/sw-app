@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './TeamsHeader.module.scss';
 import Search from '../../../components/Search';
-import { ALL, FAVORITES, ARCHIVED } from '../index';
+import { ALL, FAVORITES, ARCHIVED } from '../const';
 import clsx from 'clsx';
 
 interface TeamsHeaderProps {
@@ -73,8 +73,7 @@ const TeamsHeader: React.FC<TeamsHeaderProps> = ({
         >
           <Search
             placeholder="Search team name..."
-            // TODO?
-            handleSearch={() => console.log('whee')}
+            handleSearch={() => console.log('I am a search')}
           />
         </div>
       </div>

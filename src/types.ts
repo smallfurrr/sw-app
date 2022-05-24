@@ -17,3 +17,17 @@ export interface TeamInterface {
   created_at?: string;
   archived_on?: string;
 }
+
+interface ActivityUserInterface {
+  id: number;
+  name: string;
+  avatar: string;
+}
+
+export interface ActivityInterface {
+  id: number;
+  person: ActivityUserInterface;
+  action: string;
+  target: string;
+  created_at: string;
+}

@@ -7,3 +7,9 @@ $border: rgba(226, 226, 226, 1);
 $border-light: #EFEFEF;
 $card-border: #E4E7EC;
 $card-background: #EBEEF2;
+
+@mixin avatar-common-properties {
+    height: 36px;
+    width: 36px;
+    background-size: cover;
+}

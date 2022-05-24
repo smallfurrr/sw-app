@@ -1,0 +1,33 @@
+@import 'bootstrap/scss/_functions';
+@import 'bootstrap/scss/_variables';
+@import 'bootstrap/scss/mixins/_breakpoints';
+
+.avatar {
+    @include avatar-common-properties;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 8px;
+}
+
+.profile-btn {
+    border: none;
+    background: none;
+    color: $faded-black;
+    font-weight: $semi-bold;
+
+    &:after {
+        color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .profile-dropdown[data-bs-popper] {
+        right: 0;
+        left: auto;
+    }
+}
+
+.profile-dropdown-item {
+    color: $faded-black;
+    font-size: $button;
+}

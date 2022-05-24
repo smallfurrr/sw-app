@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import Layout from '../../components/Layout/Layout';
+import ActivityCard from './ActivityCard';
 import TeamCard from './TeamCard';
 import TeamsHeader from './TeamsHeader';
 import styles from './Teams.module.scss';
-import { TEAMS } from './mock';
-
-export const ALL = 'All';
-export const FAVORITES = 'Favorites';
-export const ARCHIVED = 'Archived';
+import { TEAMS, ACTIVITIES } from './mock';
+import { ALL, FAVORITES, ARCHIVED } from './const';
 
 const Teams = () => {
   const [displayedTeams, setDisplayedTeams] = useState(TEAMS);
@@ -69,8 +67,20 @@ const Teams = () => {
               </div>
             </div>
           </div>
-          <div className={`col-12 col-lg-3 ${styles['activity-container']}`}>
-            Activity
+          <div
+            className={`col-12 col-lg-3 p-0 align-self-start ${styles['activity-container']}`}
+          >
+            <div className={`d-flex py-3 px-4 ${styles['teams-title-row']}`}>
+              <h5 className="mb-0">Activity</h5>
+            </div>
+            <div className="py-3 px-4">
+              {ACTIVITIES.map((activity, index) => (
+                <ActivityCard
+                  activity={activity}
+                  key={`${activity.id}+${index}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
