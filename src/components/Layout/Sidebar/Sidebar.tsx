@@ -2,6 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import clsx from 'clsx';
 import styles from './Sidebar.module.scss';
+import Image from 'next/image';
 
 const Sidebar = () => {
   const router = useRouter();
@@ -14,12 +15,22 @@ const Sidebar = () => {
       <div className="d-flex flex-column align-items-center">
         <a href="#">
           <div className={styles.logo}>
-            <img src="/sw-logo-white.svg" />
+            <Image
+              src="/sw-logo-white.svg"
+              alt="saleswhale-logo"
+              width={38}
+              height={32}
+            />
           </div>
         </a>
         <a href="#">
           <div className={styles.link}>
-            <img src="/icon-campaign.svg" />
+            <Image
+              src="/icon-campaign.svg"
+              alt="talk-bubbles"
+              width={28}
+              height={26}
+            />
           </div>
         </a>
         <a href="#">
@@ -29,23 +40,28 @@ const Sidebar = () => {
               pathname === '/' && styles['active-link']
             )}
           >
-            <img src="/icon-teams.svg" />
+            <Image
+              src="/icon-teams.svg"
+              alt="buildings"
+              height={34}
+              width={34}
+            />
           </div>
         </a>
         <a href="#">
           <div className={styles.link}>
-            <img src="/icon-leads.svg" />
+            <Image src="/icon-leads.svg" alt="people" width={32} height={28} />
           </div>
         </a>
         <a href="#">
           <div className={styles.link}>
-            <img src="/icon-reports.svg" />
+            <Image src="/icon-reports.svg" alt="graph" width={30} height={30} />
           </div>
         </a>
       </div>
       <a href="#">
         <div className={styles.link}>
-          <img src="/icon-help.svg" />
+          <Image src="/icon-help.svg" alt="help" width={26} height={26} />
         </div>
       </a>
     </div>
