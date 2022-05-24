@@ -10,7 +10,7 @@ const Notifications: React.FC<NotificationsProps> = ({ user }) => {
   const { notifications_count } = user;
 
   return (
-    <a href="#" className="d-none d-md-block">
+    <a href="#" className={`d-none d-md-block ${styles['link-container']}`}>
       <div className="me-4" style={{ position: 'relative' }}>
         <div
           className={`d-flex align-items-center justify-content-center ${styles['unread-count-badge']}`}

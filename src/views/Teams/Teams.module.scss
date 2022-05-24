@@ -4,6 +4,7 @@
 
 @mixin content-container {
     background: white;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 5%), 0px 0px 30px rgb(0 0 0 / 10%);
 }
 
 .teams-container {
@@ -30,6 +31,6 @@
 
 @include media-breakpoint-up(lg) {
     .activity-container {
-        width: 22%;
+        width: 23%;
     }
 }

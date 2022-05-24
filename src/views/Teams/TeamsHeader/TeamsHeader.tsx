@@ -26,16 +26,18 @@ const TeamsHeader: React.FC<TeamsHeaderProps> = ({
           />
           <h3 className={`mb-0 ${styles['page-title']}`}>Teams</h3>
         </div>
-        <div className="col-xs-12 col-md-6 d-flex align-items-center justify-content-lg-end">
-          <button className={`btn ${styles['create-btn']}`}>
+        <div className="col-xs-12 col-md-6 d-flex align-items-center justify-content-md-end">
+          <button
+            className={`btn ${styles['create-btn']} d-flex align-items-center`}
+          >
             <Image src="/icon-add.svg" height={16} width={16} alt="plus-icon" />
             <span>CREATE NEW TEAM</span>
           </button>
         </div>
       </div>
-      <div className="row flex-column-reverse flex-md-row">
+      <div className="row flex-column-reverse flex-lg-row">
         <div
-          className={`d-flex col-xs-12 col-md-6 pb-0 ${styles['bottom-row-item']} ${styles['filter-btns-container']}`}
+          className={`d-flex col-xs-12 col-lg-6 pb-0 ${styles['bottom-row-item']} ${styles['filter-btns-container']}`}
         >
           <button
             onClick={() => handleFilter(ALL)}
@@ -69,7 +71,7 @@ const TeamsHeader: React.FC<TeamsHeaderProps> = ({
           </button>
         </div>
         <div
-          className={`col-xs-12 col-md-6 ${styles['bottom-row-item']} d-flex justify-content-lg-end`}
+          className={`col-xs-12 col-lg-6 ${styles['bottom-row-item']} d-flex justify-content-lg-end`}
         >
           <Search
             placeholder="Search team name..."
